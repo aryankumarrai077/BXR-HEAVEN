@@ -4,65 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BXR HEAVEN — Delicious Food, Delivered</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/earth1.png" type="image/x-icon">
 </head>
 
 <body>
-    <div class="container">
-        <nav>
-            <div class="navcontainer">
-                <ul class="navlist">
-                    <li>
-                        <p class="logo">BXR HEAVEN™️</p>
-                    </li>
-                    <li class="navlinks">
-                        <a href="#">HOME</a>
-                        <a href="#">CONTACT</a>
-                        <a href="#">ABOUT</a>
 
-                    </li>
-                </ul>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navcontainer">
+        <ul class="navlist">
+            <li>
+                <p class="logo">BXR HEAVEN™️</p>
+            </li>
+            <li class="navlinks">
+                <a href="#home">HOME</a>
+                <a href="#menu">MENU</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </li>
+        </ul>
+    </nav>
 
+    <!-- ===== HERO ===== -->
+    <header class="container" id="home">
+        <ul class="btn-container">
+            <li>DELICIOUS FOOD</li>
+            <li>TASTY</li>
+            <li>HEALTHY</li>
+            <li>QUALITY</li>
+        </ul>
+
+        <section class="image">
+            <img src="./images/food.png" alt="Signature dish at BXR Heaven">
+        </section>
+
+        <ul class="order">
+            <li><button class="order-btn" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">ORDER NOW</button></li>
+            <li><a href="tel:+910987654321"><button class="order-btn">CALL US NOW</button></a></li>
+        </ul>
+    </header>
+
+    <!-- ===== MENU ===== -->
+    <section class="menu-section" id="menu">
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-sub">A few favourites — swap these for your real dishes and prices.</p>
+
+        <div class="menu-grid">
+
+            <div class="menu-card">
+                <div class="menu-emoji">🍕</div>
+                <h3>Loaded Pizza</h3>
+                <p>Stone-baked, hand-tossed, piled high with your favourite toppings.</p>
+                <span class="menu-price">₹249</span>
             </div>
-        </nav>
 
-        <nav>
-            <ul>
-                <div class="btn-container">
-                    <li>DELICIOUS FOOD</li>
-                    <li>TASTY</li>
-                    <li>HEALTHY</li>
-                    <li>QUALITY</li>
+            <div class="menu-card">
+                <div class="menu-emoji">🍔</div>
+                <h3>BXR Special Burger</h3>
+                <p>Juicy patty, melted cheese, house sauce, toasted bun.</p>
+                <span class="menu-price">₹179</span>
+            </div>
 
+            <div class="menu-card">
+                <div class="menu-emoji">🍜</div>
+                <h3>Spicy Noodles</h3>
+                <p>Wok-tossed noodles with fresh veggies and a fiery sauce.</p>
+                <span class="menu-price">₹159</span>
+            </div>
 
-                </div>
+            <div class="menu-card">
+                <div class="menu-emoji">🥤</div>
+                <h3>Fresh Cooler</h3>
+                <p>Chilled, fruity, and made fresh to order.</p>
+                <span class="menu-price">₹79</span>
+            </div>
 
-            </ul>
-            <section class="image">
+            <div class="menu-card">
+                <div class="menu-emoji">🍟</div>
+                <h3>Crispy Fries</h3>
+                <p>Golden and crunchy, served with dip of your choice.</p>
+                <span class="menu-price">₹99</span>
+            </div>
 
-                <img src="./images/food.png">
-            </section>
+            <div class="menu-card">
+                <div class="menu-emoji">🍰</div>
+                <h3>LITTI CHOKHA</h3>
+                <p>Rich, gooey, and the perfect meal for BIHARI</p>
+                <span class="menu-price">₹129</span>
+            </div>
 
+        </div>
+    </section>
 
-            <ul class="order">
-                <button class="order-btn">ORDER NOW</button>
-                <button class="order-btn">call us now</button>
+    <!-- ===== ABOUT ===== -->
+    <section class="about-section" id="about">
+        <div class="about-text">
+            <h2 class="section-title">About BXR Heaven</h2>
+            <p>
+                BXR Heaven is your neighbourhood spot for food that's fast, fresh, and full of
+                flavour. From loaded pizzas to spicy noodles, every dish is made to order using
+                quality ingredients — because good food shouldn't be complicated.
+            </p>
+            <p>
+                Replace this text with your restaurant's real story: when you started, what makes
+                your food different, and why people should choose you.
+            </p>
+        </div>
+        <div class="about-emoji">👨‍🍳</div>
+    </section>
 
+    <!-- ===== CONTACT ===== -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title light">Get In Touch</h2>
+        <p class="section-sub light">Questions, feedback, or a big order — reach out anytime.</p>
 
-            </ul>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <p><strong>📍 Address:</strong> central jail road , buxar </p>
+                <p><strong>📞 Phone:</strong> +91 0987654321</p>
+                <p><strong>✉️ Email:</strong> bxrheaven@gmail.com</p>
+                <p><strong>🕒 Hours:</strong> 11:00 AM – 11:00 PM, all week</p>
+            </div>
 
+            <form class="contact-form" onsubmit="alert('Thanks! We will get back to you soon.'); return false;">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="order-btn">SEND MESSAGE</button>
+            </form>
+        </div>
+    </section>
 
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p class="logo footer-logo">BXR HEAVEN™️</p>
+        <ul class="footer-links">
+            <a href="#home">HOME</a>
+            <a href="#menu">MENU</a>
+            <a href="#about">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </ul>
+        <p class="footer-copy">© 2026 BXR Heaven. All rights reserved.</p>
+    </footer>
 
-
-        </nav>
-    </div>
-    </ul>
-
-
-
-    </div>
 </body>
 
 </html>
